@@ -1,5 +1,35 @@
-CableTrayCalculator/
-│
-├── index.html
-├── styles.css
-└── script.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cable Tray Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cable Tray Calculator</h1>
+        <form id="calculator-form">
+            <label for="cable-diameter">Cable Diameter (mm):</label>
+            <input type="number" id="cable-diameter" name="cable-diameter" required>
+            
+            <label for="number-of-cables">Number of Cables:</label>
+            <input type="number" id="number-of-cables" name="number-of-cables" required>
+            
+            <label for="tray-type">Tray Type:</label>
+            <select id="tray-type" name="tray-type">
+                <option value="standard">Standard</option>
+                <option value="ventilated">Ventilated</option>
+            </select>
+            
+            <button type="button" onclick="calculate()">Calculate</button>
+        </form>
+        
+        <div id="result">
+            <h2>Result:</h2>
+            <p id="result-text">Enter your details and click "Calculate".</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
